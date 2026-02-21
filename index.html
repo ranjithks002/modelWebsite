@@ -20,19 +20,27 @@
         width: 80px;
     }
     .container {
-        max-width: 1400px;
+        max-width: 1600px;
         margin: 0 auto;
         padding: 0 20px;
+        padding-top: 20px;   
     }
      .navbar-custom {
-            background-color: #0d6efd;
-            padding: 15px 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    background-color: #0d6efd;
+    padding: 15px 20px;
+    border-radius: 0px 0px 10px 10px;
+    margin-bottom: 30px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+    width: calc(100% + 40px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
         .navbar-left {
             display: flex;
             align-items: center;
@@ -177,6 +185,7 @@
             flex-direction: column;
             align-items: center;
             position: relative;
+            cursor: pointer;
         }
         .image-div {
             background-color: white;
@@ -301,12 +310,12 @@
             background-color: #A1E3F9;
             color: black;
             padding: 40px 30px;
-            margin-top: 50px;
-             border-radius: 10px 10px 0px 0px;
+            /* margin-top: 50px; */
+            border-radius: 10px 10px 0px 0px;
             margin-left: -20px;
             margin-right: -20px;
             margin-bottom: -50px;
-    width: calc(100% + 40px);
+            width: calc(100% + 40px);
         }
         .footer-content {
             display: flex;
@@ -346,6 +355,8 @@
             height: 35px;
             width: 35px;
             cursor: pointer;
+            position: relative;
+            left: 35px;
             transition: 0.3s;
         }
         .social-icons img:hover {
@@ -359,6 +370,13 @@
             width: 25px;
             margin-right: 10px;
             vertical-align: middle;
+            position: relative;
+            left: 120px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .contact-info img:hover {
+            transform: scale(1.2);
         }
         .footer-links {
             display: flex;
@@ -783,14 +801,6 @@
 
         <div class="calculator-col">
         <div class="card">
-        <div class="card-header text-center bg-primary text-white">NET WORTH</div>
-        <div class="card-body p-0">
-        <a href="#">Net Worth Calculator</a>
-        </div></div></div></div>
-
-        <div class="calculator-row">
-        <div class="calculator-col">
-        <div class="card">
         <div class="card-header text-center bg-primary text-white">MONTHLY INVESTMENT TRACKER</div>
         <div class="card-body p-0">
         <a href="#">Other Goals Investment Tracker</a>
@@ -810,6 +820,14 @@
         <a href="#">Goal Planner</a>
         </div></div></div>
 
+        <div class="calculator-col">
+        <div class="card">
+        <div class="card-header text-center bg-primary text-white">NET WORTH</div>
+        <div class="card-body p-0">
+        <a href="#">Net Worth Calculator</a>
+        </div></div></div></div>
+
+        <div class="calculator-row">
      <div class="calculator-row">
         <div class="calculator-col">
             <div class="card">
@@ -835,12 +853,12 @@
 
             <div class="footer-section">
                 <div class="contact-info">
-                    <h4>Contact</h4>
+                    <h4 class="text-center">Contact</h4>
                     <img src="phone.png" alt="Call">
                     <img src="mail.png" alt="Mail">
                 </div>
                 <div class="social-icons">
-                    <h4 style="width: 100%;">Follow Us</h4>
+                    <h4 style="width: 100%;" class="text-center">Follow Us</h4>
                     <img src="xlogo.png" id="footerImage">
                     <img src="linkedInlogo.png" id="footerImage">
                     <img src="instagramlogo.png" id="footerImage">
@@ -925,7 +943,7 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
 
     <!-- Success Modal -->
     <div class="modal fade" id="successModal" tabindex="-1">
@@ -985,7 +1003,7 @@
 
 
     <!-- Success Login Modal -->
-<div class="modal fade" id="loginSuccessModal" tabindex="-1">
+    <div class="modal fade" id="loginSuccessModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header bg-info text-white">
@@ -1001,10 +1019,10 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
 
-<!-- Error Login Modal -->
-<div class="modal fade" id="loginErrorModal" tabindex="-1">
+    <!-- Error Login Modal -->
+    <div class="modal fade" id="loginErrorModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header bg-danger text-white">
@@ -1020,7 +1038,7 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
 
 </div>
 
@@ -1138,5 +1156,4 @@
     }
     </script>
 </body>
-
 </html>
