@@ -162,11 +162,18 @@
             font-size: 1.3rem;
             margin-bottom: 10px;
         } 
-        .carousel-caption button {
-            margin-top: 10px;
+        .carousel-caption button{
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            height: 30px;
+            width: 110px;
+            position: relative;
+            bottom: 16px;
+            transition: 0.1s;
+        }
+        .carousel-caption button:hover {
+            transform: scale(1.05);
         }
 
 
@@ -479,11 +486,8 @@
                 flex: 0 0 100%;
             }
         }
-
-
-
-
 </style>
+
 <body>
     <div class="container">
         <nav class="navbar-custom">
@@ -544,11 +548,11 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-        <img src="angel1.png" class="d-block w-100" alt="AngelOne" id="banner">
+        <img src="angelOne.png" class="d-block w-100" alt="AngelOne" id="banner">
       <div class="carousel-caption">
             <h5>Sign Up for AngelOne</h5>
             <p>Open an Instant Demat Account</p>
-            <button type="button" class="bg-light">To Know More</button>
+            <div class="dummy"><button type="button" class="bg-light">To Know More</button></div>
       </div>
     </div>
     <div class="carousel-item">
@@ -556,7 +560,7 @@
       <div class="carousel-caption d-none d-md-block">
             <h5>Sign Up for GoldenPi</h5>
             <p>Starting Diversifing Your Portfolio by Investing in Bonds</p>
-            <button type="button" class="bg-light">To Know More</button>
+            <div class="dummy"><button type="button" class="bg-light">To Know More</button></div>
       </div>
     </div>
     <div class="carousel-item">
@@ -564,7 +568,7 @@
       <div class="carousel-caption d-none d-md-block">
             <h5>Soveriegn Gold Bonds</h5>
             <p>Invest in Gold Bonds</p>
-            <button type="button" class="bg-light">To Know More</button>
+            <div class="dummy"><button type="button" class="bg-light">To Know More</button></div>
         </div>
     </div>
   </div>
@@ -827,7 +831,7 @@
         <a href="#">Net Worth Calculator</a>
         </div></div></div></div>
 
-        <div class="calculator-row">
+        <!-- <div class="calculator-row" id="last-box">
      <div class="calculator-row">
         <div class="calculator-col">
             <div class="card">
@@ -835,7 +839,7 @@
         <div class="card-body p-0">
         <a href="#">Present Value Interest</a>
         <a href="#">Annuity Payout</a>
-        </div></div></div></div>
+        </div></div></div></div> -->
     </div>
 
     <!-- Footer -->
@@ -874,7 +878,7 @@
             </div>
         </div>
             <div class="footer-copyright">
-            <p>© 2025 InvestWise. All Rights Reserved.</p>
+            <p>© 2026 InvestWise. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -1157,4 +1161,3 @@
     </script>
 </body>
 </html>
-
