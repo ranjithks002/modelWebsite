@@ -235,8 +235,28 @@
         }
 
 
-         .accordion {
-            margin: 50px 0;
+    .accordion-wrapper {
+        margin: 50px 0;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .accordion {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+        .accordion-item {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .accordion-collapse {
+            flex: 1;
+        }
+        .accordion-body {
+              height: 100%;
         }
         .accordion-button {
             font-weight: 600;
@@ -468,6 +488,9 @@
             .calculator-col {
                 flex: 0 0 calc(50% - 20px);
             }
+            .accordion {
+        flex-direction: column;
+    }
         }
         
         @media (max-width: 768px) {
@@ -486,6 +509,7 @@
                 flex: 0 0 100%;
             }
         }
+        
 </style>
 
 <body>
@@ -665,14 +689,15 @@
     </div>
     </div>
 
-    <div class="accordion" id="accordionExample">
-  <div class="accordion-item" id="glide1">
+    <div class="accordion-wrapper">
+<div class="accordion" id="accordion1">
+  <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
         Money Matters : Lets Understand
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion1">
       <div class="accordion-body">
         <ul>
             <li><a href="#home">Importance of Saving</a></li>
@@ -684,19 +709,22 @@
             <li><a href="#home">Insurance - Protection Against Unforeseen Events</a></li>
             <li><a href="#home">Estate Planning</a></li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
-  <div class="accordion-item" id="glide1">
+</div>
+
+<div class="accordion" id="accordion2">
+  <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
         Investment : Avenue To Grow Your Money
       </button>
     </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordion2">
       <div class="accordion-body">
         <ul>
-        <li><a href="home2">Investing: Let’s Understand</a></li>
+        <li><a href="home2">Investing: Let's Understand</a></li>
         <li><a href="home2">Importance of Investing Early</a></li>
         <li><a href="home2">Factors to Consider Before Investing</a></li>
         <li><a href="home2">Avenues for Investment</a></li>
@@ -706,13 +734,16 @@
       </div>
     </div>
   </div>
-  <div class="accordion-item" id="glide1">
+</div>
+
+<div class="accordion" id="accordion3">
+  <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
         Securities Market Investment : Lets Learn
       </button>
     </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordion3">
       <div class="accordion-body">
          <ul>
             <li><a href="home3">Video based Learning Modules</a></li>
@@ -722,12 +753,13 @@
             <li><a href="home3">Market Intermediaries and Services</a></li>
             <li><a href="home3">Grievance Redressal In Securities Market</a></li>
             <li><a href="home3">Key Risks in Securities Market</a></li>
-            <li><a href="home3">Do’s and Don’ts of Investing in Securities Market</a></li>
+            <li><a href="home3">Do's and Don'ts of Investing in Securities Market</a></li>
             <li><a href="home3">Important Topics / Key Terms</a></li>
          </ul>
       </div>
     </div>
   </div>
+</div>
 </div>
 
     <div class="financial-calculator-container" id="financial-calculator">
